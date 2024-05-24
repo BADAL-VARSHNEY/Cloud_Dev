@@ -1,0 +1,27 @@
+
+
+.home__container{
+  background: var(--rich_black);
+  color: var(--primary_color);
+  background-image: url(../../assets/Images/wave1.svg);
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: var(--primary_width);
+  height: var(--primary_height);
+}
+
+
+.home_content{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_content h1{
+  font-size: var(--text_size_48);
+  font-family: var(--font_heading_family);
+  
+}
+
