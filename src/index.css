@@ -1,30 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kalam:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 
-html{
-  /* scroll-behavior: smooth; */
+html {
+  scroll-behavior: smooth;
 }
 
-*{
+* {
   padding: var(--size_0);
   margin: var(--size_0);
   box-sizing: border-box;
 }
 
-.custom_cursor{
-  background-color: #fff;
-  height: 32px;
-  width: 32px;
+.custom_cursor {
+  position: absolute;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: #fff;
   pointer-events: none;
-  transition: all 0.1s linear;
+  z-index: 9999;
+  box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, width 0.1s ease, height 0.1s ease,
+    background-color 0.1s ease;
+}
+
+.custom_cursor.text {
+  width: 80px;
+  box-shadow: 0 0 20px #fff;
+  height: 80px;
+  background-color: white;
+  mix-blend-mode: difference;
+}
+
+i {
+  position: absolute;
+  width: var(--size_4);
+  height: var(--size_4);
+  border-radius: 50%;
+  background: #0095ff;
+  pointer-events: none;
+  animation: animate 2s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y));
+  }
 }
 
 :root {
-
   /* color code */
   --primary_color: #fff;
   --deep_color: #000;
@@ -35,15 +65,22 @@ html{
   --ash_gray: #9dbebbff;
   --parchment: #f4e9cdff;
   --dark_blue: #071330;
-  --midnight_blue: #0C4160;
-  --blue_gray: #738FA7;
-  --misty_blue: #C3CEDA;
-  --gradiant_color: linear-gradient(320deg, #031926ff, #468189ff, #77aca2ff, #9dbebbff, #f4e9cdff);
+  --midnight_blue: #0c4160;
+  --blue_gray: #738fa7;
+  --misty_blue: #c3ceda;
+  --gradiant_color: linear-gradient(
+    320deg,
+    #031926ff,
+    #468189ff,
+    #77aca2ff,
+    #9dbebbff,
+    #f4e9cdff
+  );
   --bg_tranperent: transparent;
-  
+
   /* font and Width code */
   --max-width_xxl: 90rem;
-  --max-width-xl: 80rem; 
+  --max-width-xl: 80rem;
   --max-height_xxl: 90rem;
   --max-height-xl: 80rem;
   --primary_height: 100vh;
@@ -57,14 +94,13 @@ html{
   --text_size_20: 1.25rem;
   --text_size_18: 1.125rem;
   --text_size_16: 1rem;
-  --text_size_14: .875rem;
-  --text_size_12: .75rem;
+  --text_size_14: 0.875rem;
+  --text_size_12: 0.75rem;
   --font_weight_300: 300;
   --font_weight_400: 400;
   --font_weight_700: 700;
 
-
-   /* font famliy */
+  /* font famliy */
   --font_text_family: "Dancing Script", cursive;
   --font_heading_family: "Kalam", cursive;
 
@@ -72,85 +108,85 @@ html{
   --size_48: 3em;
   --size_24: 1.5em;
   --size_16: 1em;
-  --size_12: .75em;
-  --size_10: .625em;
-  --size_8: .5em;
-  --size_6: .375em;
-  --size_4: .25em;
+  --size_12: 0.75em;
+  --size_10: 0.625em;
+  --size_8: 0.5em;
+  --size_6: 0.375em;
+  --size_4: 0.25em;
   --size_0: 0;
- 
 
-   /* border code */
-   --border: 1px solid var(--deep_red);
-   --border_2: 2px solid var(--deep_red);
-   --border_4: 4px solid var(--deep_red);
-   --border_color: var(--dark_blue);
-   --box_shadow:  4.5px 4.5px 2.4px rgba(249, 248, 248, 0.06),
-   12.5px 12.5px 6.6px rgba(253, 250, 250, 0.036),
-   30.1px 30.1px 16px rgba(242, 239, 239, 0.026),
-   100px 100px 53px rgba(248, 247, 247, 0.019);
-
+  /* border code */
+  --border: 1px solid var(--deep_red);
+  --border_2: 2px solid var(--deep_red);
+  --border_4: 4px solid var(--deep_red);
+  --border_color: var(--dark_blue);
+  --box_shadow: 4.5px 4.5px 2.4px rgba(249, 248, 248, 0.06),
+    12.5px 12.5px 6.6px rgba(253, 250, 250, 0.036),
+    30.1px 30.1px 16px rgba(242, 239, 239, 0.026),
+    100px 100px 53px rgba(248, 247, 247, 0.019);
 
   /* css code */
   --heading_size: var(--text_size_70);
   --paragrap_size: var(--text_size_14);
   --padding_st: var(--size_6), var(--size_10);
   --margin_st: var(--size_6), var(--size_10);
-
 }
 
-.m_auto{
+.m_auto {
   margin: auto;
 }
-.m_0{
+.m_0 {
   margin: var(--size_0);
 }
-.m_4{
+.m_4 {
   margin: var(--size_4);
 }
-.m_6{
+.m_6 {
   margin: var(--size_6);
 }
-.m_8{
+.m_8 {
   margin: var(--size_8);
 }
-.m_10{
+.m_10 {
   margin: var(--size_10);
 }
-.m_12{
+.m_12 {
   margin: var(--size_12);
 }
 
-.p_0{
+.p_0 {
   padding: var(--size_0);
 }
-.p_4{
+.p_4 {
   padding: var(--size_4);
 }
-.p_6{
+.p_6 {
   padding: var(--size_6);
 }
-.p_8{
+.p_8 {
   padding: var(--size_8);
 }
-.p_10{
+.p_10 {
   padding: var(--size_10);
 }
-.p_12{
+.p_12 {
   padding: var(--size_12);
 }
 
-.cursor{
-  cursor: pointer;
-}
-
-.w{
+.w {
   width: var(--primary_width);
 }
-.h{
+.h {
   height: var(--primary_height);
 }
 
-
-
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  font-family: var(--font_heading_family);
+}

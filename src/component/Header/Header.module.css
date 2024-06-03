@@ -2,7 +2,6 @@
 .header{
 	background: var(--rich_black);
 	color: var(--primary_color);
-	font-family: var(--font_heading_family);
 	padding: var(--size_8);
 	width: var(--primary_width);
 	display: flex;
@@ -34,7 +33,7 @@
 }
 
 .nav__list li {
-	cursor: pointer;
+	cursor: none;
 	transition: all 0.8s;
 }
 

@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <>
       <header className={styles.header}>
-        <h1 onMouseEnter={textEnter} onMouseLeave={textLeave} className="cursor">Cloud_Dev</h1>
+        <h1 onMouseEnter={textEnter} onMouseLeave={textLeave} className="">Cloud_Dev</h1>
         <nav className={styles.nav__container}>
           <ul className={styles.nav__list}>
             <li onMouseEnter={textEnter} onMouseLeave={textLeave}>Home</li>
