@@ -60,7 +60,7 @@ const Layout = () => {
     <>
       <Header setCursorVariant={setCursorVariant} />
       <Home setCursorVariant={setCursorVariant} />
-      <Footer />
+      <Footer/>
       <div
         className={`custom_cursor ${cursorVariant}`}
         style={{

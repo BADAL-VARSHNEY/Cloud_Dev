@@ -2,8 +2,7 @@ import React from "react";
 import styles from "./Home.module.css";
 
 const Home = (props) => {
-  const {setCursorVariant} = props;
-
+  const { setCursorVariant } = props;
 
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
@@ -11,9 +10,11 @@ const Home = (props) => {
   return (
     <>
       <div className={styles.home__container}>
-      <div className={styles.home_content}>
-        <h1 onMouseEnter={textEnter} onMouseLeave={textLeave} >Home Page</h1>
-      </div>
+        <div className={styles.home_content}>
+          <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>
+            Home Page
+          </h1>
+        </div>
       </div>
     </>
   );
