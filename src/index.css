@@ -3,12 +3,18 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start; 
 }
 
 * {
   padding: var(--size_0);
   margin: var(--size_0);
   box-sizing: border-box;
+  cursor: none;
+}
+body{
+  overflow-x: hidden;
 }
 
 .custom_cursor {
