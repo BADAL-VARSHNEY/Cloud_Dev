@@ -3,7 +3,7 @@
 .home__container{
   background: var(--rich_black);
   color: var(--primary_color);
-  background-image: url(../../assets/Images/wave1.svg);
+  /* background-image: url(../../assets/Images/wave1.svg); */
   background-position: bottom;
   background-size: 100%;
   background-repeat: no-repeat;
